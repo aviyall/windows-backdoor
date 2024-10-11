@@ -20,24 +20,6 @@ def connect(host, port):
     s.connect((host, port))
     return s
 
-
-def handle_user_input(s):
-    # Handle user input in a separate thread 
-    global input_thread_active
-    input_thread_active = True
-    while input_thread_active:
-        try:
-            tri = input()  # Take input from the user
-            if tri == "quit":
-                s.close()
-                sys.exit(0)
-            s.send(tri.encode())
-        except Exception as e:
-            print(f"Error in input thread: {e}")
-            break
-    input_thread_active = False
-
-
 def wait_for_command(s):
     # Wait for and execute commands from the server
     global current_dir 
@@ -83,7 +65,6 @@ def wait_for_command(s):
         print(f"Error: {e}")
         return True  
 
-
 def main():
    # Main loop for connecting and handling communication
     global input_thread_active
@@ -106,7 +87,6 @@ def main():
 
         time.sleep(delay)  
 
-
 if __name__ == "__main__":
     while True:
         try:
@@ -114,3 +94,4 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Exception in main loop: {e}")
             time.sleep(delay)
+            

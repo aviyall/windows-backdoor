@@ -1,6 +1,6 @@
 # Python Backdoor for Windows On Public Networks
 
-This project is a Python-based backdoor that is to be executed on target system, after executing, the Target PC connects to a remote server 'SERVEO' at a specific TCP port form which the connection is forwarded to Attacker system or YOUR PC, Thus succesfully establishing a connection between your PC and the target system and allowing unauthorized access. The connection contains a PowerShell command interface, allowing Attacker to execute PowerShell commands on the target system. 
+This project is a Python-based backdoor that is to be executed on target system, after executing, the Target PC connects to a remote server 'SERVEO' at a specific TCP port from which the connection is forwarded to Attacker system or YOUR PC, Thus succesfully establishing a connection between your PC and the target system and allowing unauthorized access. The connection contains a PowerShell command interface, allowing Attacker to execute PowerShell commands on the target system. 
 
 - To get this to working a Tool must be installed on YOUR PC
 

@@ -7,8 +7,14 @@ This project is a Python-based backdoor that is to be executed on target system,
 ## Netcat installation
   
   To be able to receive and interpret incoming backdoor as a PowerShell command line we should use 'Netcat'. Netcat, also known as Ncat, is a powerful networking tool used for reading and writing to network connections using TCP or UDP protocols.
+  ### For Linux:
+  ```shell
+ sudo apt install ncat
+  ```
+  - This one commad is enough to set up ncat on linux
+### For windows:
 
-  Netcat comes With a networking tool called 'Nmap':
+  For WINDOWS Netcat comes With a networking tool called 'Nmap':
   - Go to Nmap official site https://nmap.org/download.html#windows
   - Download nmap installer and run it.
   - ***CHECK Ncat at this window***
@@ -26,7 +32,7 @@ This project is a Python-based backdoor that is to be executed on target system,
   - This command will connect port 5555 on our local machine to port 61732 on the public server 'serveo' , any TCP port between range (49152–65535) will work, change the port no if not available.
   - ***Make sure the port number here (in this case 61732) is same as the port number on python code***
 
- ### REMINDER: you should keep a terminal open running this ssh command in order for this to work
+ ### REMINDER: you should keep a dedicated terminal open running this ssh command in order for this to work
  ## Ncat usage
  After Successfull installation you should see like this when you run the command 'ncat' :
  ![ncat_test](https://github.com/user-attachments/assets/d752e99b-ec2e-4722-b81d-2bce64bfe825)

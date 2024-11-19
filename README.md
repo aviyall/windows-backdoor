@@ -1,6 +1,6 @@
 # Python Backdoor for Windows On Public Networks
 
-This project is a Python-based backdoor that is to be executed on target system, after executing, the Target PC connects to a remote server 'SERVEO' at a specific TCP port from which the connection is forwarded to Attacker system or YOUR PC, Thus succesfully establishing a connection between your PC and the target system and allowing unauthorized access. The connection contains a PowerShell command interface, allowing Attacker to execute PowerShell commands on the target system. 
+This project is a Python-based Windows backdoor that, once executed on the target PC, establishes a connection to a remote server hosted on SERVEO at a specified TCP port. The server then forwards the connection to the attacker's system, successfully bridging communication between the attacker's machine and the target system. This connection grants unauthorized access to the target machine and provides a PowerShell command interface. Through this interface, the attacker can remotely execute PowerShell commands on the compromised system. The best part for this is that this will work even if the firewall and antivirus are running, because all the communications are happening through an ssh tunnel.
 
 - To get this to working a Tool must be installed on YOUR PC
 
@@ -53,6 +53,9 @@ This project is a Python-based backdoor that is to be executed on target system,
 
  For Learning purposes only.
  
- This might be a game changer for beginners.
+
+ You can configure the system to automatically startup the program on reboot.
+ ON windows systems you can do this by using Task Scheduler or by tampering with registry.
+ 
  
  Try your best not to do anything ilegal :)

@@ -22,10 +22,15 @@ This project is a Python-based Windows backdoor that, once executed on the targe
  ![nmap_setup](https://github.com/user-attachments/assets/1916f804-be3e-4a5e-a362-b9f4b95439ce)
   - Continue the installation with default settings after this.
  
- ## SSH Server setup (serveo)
+ ## SSH Server setup
   As mentioned already In order to receive connections from a public network we must have a public server capable of doing these things, for that 'serveo' is the best option. (it's an open source project )
   - you can visit 'https://serveo.net' for more knowledge
-  
+    
+> [!NOTE]
+> The 'SERVEO' service is often reported to experience prolonged periods of downtime.
+> 
+>  **Current :** ![status](https://img.shields.io/uptimerobot/status/m798198859-ecf1064c616a7c3cbfac9734)
+
   ```powershell
   ssh -R 61732:localhost:5555 serveo.net
   ```
@@ -48,15 +53,12 @@ This project is a Python-based Windows backdoor that, once executed on the targe
 
  While the python command is running on the target device connection will be established now you can start exceuting commands:
  ![final](https://github.com/user-attachments/assets/ba7bc1af-675e-4697-a9a5-be3f7be5749f)
-
-- ***If the connection is stuck or not responding just close the current terminal open new one and run the same command the python code try try to reconnect every 120sec of inactivity (the time delay can be modified from the code)***
-- ***Remember do not leave the terminal inactive, the connection will be lost since the python code try to reconnect***
-
- For Learning purposes only.
+>[!TIP]
+> - Remember do not leave the terminal inactive, the connection will be lost since the python code tries to reconnect every 120sec (this time delay can be modified in the code) when no activity is dectected.
+>   
+> - If the terminal is stuck or not responding just close the current terminal and open new terminal and run the same ncat command, the python code is configured to try and reconnect if connection is closed.
+>   
+> - **You can configure the system to automatically startup the program on reboot. ON windows systems you can do this by using Task Scheduler or by tampering with registry.**
  
 
- You can configure the system to automatically startup the program on reboot.
- ON windows systems you can do this by using Task Scheduler or by tampering with registry.
- 
- 
- Try your best not to do anything ilegal :)
+ ### For Learning purposes only. Do not do anything ilegal.
